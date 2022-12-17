@@ -11,7 +11,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
 # read an image
-img = cv.imread("1.png")
+img = cv.imread("5.png")
 img = cv.resize(img, (900,600))
 # pytesseract deals with RGB images so we have to convert to RGB as opencv reads in BGR format
 RGBimg = cv.cvtColor(img, cv.COLOR_BGR2RGB)
