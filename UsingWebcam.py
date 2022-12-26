@@ -6,7 +6,7 @@ pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesse
 
 output = np.ones((400, 400), "uint8")
 
-cam = cv.VideoCapture(1)
+cam = cv.VideoCapture(2)
 
 while True:
     Success, frame = cam.read()
@@ -44,7 +44,7 @@ while True:
                 cv.putText(output, b[11], (x, y), cv.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 2)
 
 
-    cv.imshow("webcam", RGBFrame)
+    cv.imshow("webcam", frame)
     cv.imshow("2", copyFrame)
     cv.imshow("3", output)
     k = cv.waitKey(1)
